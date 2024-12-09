@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Bookmarker App is a web that saves  favorite sites to visit it any time easy" />
+    <meta name="keywords" content="javascript, Bookmarker, CRUD Operations" />
+    <meta charset="UTF-8" />
+    <title>Bookmarker</title>
+
+    <link href="./images/bookmark.png" rel="icon" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row mt-5 mb-5">
+            <div class="col-sm-12">
+                <div class="bookmarker-container d-flex justify-content-center">
+                    <h1>Bookmarker</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row  outer-dashed ">
+            <div class="col-sm-12">
+                <div class="bookmark-form">
+                    <header class="d-flex justify-content-center mt-3">
+                        <h2>
+                            <i class="fa-solid fa-bookmark"></i>
+                            Bookmark your favorite sites
+                            <i class="fa-solid fa-bookmark"></i>
+                        </h2>
+                    </header>
+                    <form class="">
+
+                        <label for="site_name" class="label-text-style"><i
+                                class="fa-solid fa-book-bookmark pe-2 ps-1"></i> Site Name</label>
+                        <input id="site_name" class="form-control mt-2" type="text" placeholder="Bookmark Name">
+
+
+                        <label for="site_url" class="mt-4 label-text-style"><i class="fa-solid fa-link pe-2 ps-1"></i>
+                            Site Name</label>
+                        <input id="site_url" class="form-control mt-2" type="text" placeholder="Website URL">
+
+                        <div class="button-container d-flex justify-content-center mt-4 mb-4">
+                            <button type="button" id="btnsubmit" class=" btn btn-submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row table-container">
+            <div class="col-sm-12 gx-0">
+                <table class="w-100 mt-4 text-center">
+                    <thead class="bg-light">
+                        <tr>
+                            <th>Index</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookmarks_tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Vertically centered modal -->
+
+    <!-- Modal -->
+    <div class="modal fade  shadow-lg" id="modal-body">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                    <button type="button" class="btn-close close-modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Site Name or Url is not valid, Please follow the <br>rules below :</p>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
